@@ -9,9 +9,9 @@ NAME="plasma_applet_"$(grep "X-KDE-PluginInfo-Name" ../plasmoid/metadata.desktop
 set -e
 
 if [ -n "$LANGDIR" ]; then
-    if [ ! -d "$LANGDIR" ]; then
-        mkdir -p "$LANGDIR/LC_MESSAGES"
-    fi
+  if [ ! -d "$LANGDIR" ]; then
+    mkdir -p "$LANGDIR/LC_MESSAGES"
+  fi
 else
   echo "Missing LANG parameter
 usage: $0 LANG
@@ -21,13 +21,12 @@ usage: $0 LANG
   exit
 fi
 
-
 if [ -d "$LANGDIR" ]; then
-    if [ -f "$LANGDIR/LC_MESSAGES/$NAME.po" ]; then
-        echo "Merging $NAME.pot -> $LANGDIR/LC_MESSAGES/$NAME.po ..."
-        msgmerge -U --backup=none "$LANGDIR/LC_MESSAGES/$NAME.po" "$NAME.pot"
-    else
-        echo "Copying $NAME.pot -> $LANGDIR/LC_MESSAGES/$NAME.po ..."
-        cp "$NAME.pot" "$LANGDIR/LC_MESSAGES/$NAME.po"
-    fi
+  if [ -f "$LANGDIR/LC_MESSAGES/$NAME.po" ]; then
+    echo "Merging $NAME.pot -> $LANGDIR/LC_MESSAGES/$NAME.po ..."
+    msgmerge -U --backup=none "$LANGDIR/LC_MESSAGES/$NAME.po" "$NAME.pot"
+  else
+    echo "Copying $NAME.pot -> $LANGDIR/LC_MESSAGES/$NAME.po ..."
+    cp "$NAME.pot" "$LANGDIR/LC_MESSAGES/$NAME.po"
+  fi
 fi
