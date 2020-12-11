@@ -1,8 +1,8 @@
 #!/bin/sh
 
 # Go to script dir
-cd "$(dirname $0)"
-DIR=$(pwd)
+cd "$(dirname "$0")"
+DIR=$PWD
 
 BUGLNK='https://github.com/dhabyx/plasma-simpleMonitor/issues'
 AUTHORS="Dhaby Xiloj, Konstantin Shtepa"
@@ -13,10 +13,10 @@ VERSION=$(grep "X-KDE-PluginInfo-Version" ../plasmoid/metadata.desktop | sed 's/
 XGETTEXT="xgettext --from-code=UTF-8 -kde -ci18n -ki18n:1 -ki18nc:1c,2 -ki18np:1,2 \
           -ki18ncp:1c,2,3 -ktr2i18n:1 -kI18N_NOOP:1 -kI18N_NOOP2:1c,2 -kaliasLocale \
           -kki18n:1 -kki18nc:1c,2 -kki18np:1,2 -kki18ncp:1c,2,3xgettext -ki18n -ki18nc
-          -ki18ncp -ki18np --package-version=${VERSION} --package-name=${NAME}\
-          --msgid-bugs-address=${BUGLNK}"
+          -ki18ncp -ki18np --package-version=$VERSION --package-name=$NAME\
+          --msgid-bugs-address=$BUGLNK"
 
-$XGETTEXT --copyright-holder="${AUTHORS}" `find ../plasmoid -name \*.qml -o -name \*.js` -L JavaScript -o "$NAME.pot"
+"$XGETTEXT" --copyright-holder="$AUTHORS" "$(find ../plasmoid -name \*.qml -o -name \*.js)" -L JavaScript -o "$NAME.pot"
 
 sed -e 's/SOME DESCRIPTIVE TITLE./plasma-simpleMonitor language translation file./g' -i "$NAME.pot"
 sed -e "s/YEAR/2013-2017/g" -i "$NAME.pot"
