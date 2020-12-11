@@ -1,17 +1,25 @@
 # plasma-simpleMonitor Change Log
+
 All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/).
 
 ## [Unreleased] - 2017-xx-xx
-    ### Added 
+
+    ### Added
+    - Turkish translation.
+
+## [Unreleased] - 2017-xx-xx
+
+    ### Added
     - Chinese(simplified) translation.
     - Polish translation.
-    
+
     ### Fixed
     - Plasmoid logo path in .desktop file.
 
 ## [0.6] - 2017-03-19
+
     ### Added
     - Translation support.
     - ru translation.
@@ -34,6 +42,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
     - Tuz logo.
 
 ## [0.6-rc1] - 2017-02-07
+
     ### Added
     - Plasma 5 support.
     - Instructions for installation in README.
@@ -58,6 +67,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
     - Plasma(KDE4) support.
 
 ## [0.5] - 2014-05-26
+
     ### Added
     - Fahrenheit support.
     - Visual improvements.
@@ -67,11 +77,13 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
     - LoadBar completed.
 
 ## [0.4] - 2013-12-28
+
     ### Fixed
     - Elements alignments.
     - Bad uptime.
 
 ## [0.3] - 2013-12-28
+
     ### Added
     - Background settings.
     - Logos for Kubuntu, Ubuntu and tuz.
@@ -82,10 +94,12 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
     - Fonts.
 
 ## [0.2] - 2013-12-27
+
     ### Added
     - AMD K7 support for lmsensors.
     - Temperature settings.
     - README.
 
 ## [0.1] - 2013-12-27
+
     - Initial Commit.
